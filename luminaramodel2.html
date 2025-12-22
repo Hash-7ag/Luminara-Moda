@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMINARA MODA</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Wrapper: Yazı və video yan-yana */
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* SOL YAZI SAHƏSİ */
+.left {
+    width: 50%;
+    height: 100vh;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow: hidden;
+    background: #fff;
+}
+
+.left h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.left h2 {
+    margin-top: 30px;
+    font-size: 28px;
+    line-height: 1.8;
+}
+
+.left p, .left ul {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #333;
+}
+
+.left ul {
+    padding-left: 20px;
+}
+
+.left li {
+    margin-bottom: 10px;
+}
+
+/* SAĞ VİDEO */
+.right {
+    width: 50%;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Prev / Next Düymələri */
+.nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.26);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.nav-btn:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+/* Media Queries */
+
+/* Laptop L - 1440px */
+@media (max-width: 1440px) {
+    .left h1 { font-size: 32px; }
+    .left h2 { font-size: 26px; }
+    .left p, .left li { font-size: 17px; }
+    .nav-btn { font-size: 28px; padding: 9px; }
+}
+
+/* Laptop - 1024px */
+@media (max-width: 1024px) {
+    .left h1 { font-size: 30px; }
+    .left h2 { font-size: 24px; }
+    .left p, .left li { font-size: 16px; }
+    .nav-btn { font-size: 26px; padding: 8px; }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+        height: auto;
+    }
+    .left h1 { font-size: 28px; }
+    .left h2, .left p, .left li { font-size: 16px; }
+    .nav-btn { font-size: 25px; padding: 8px; }
+}
+
+/* Mobile L - 425px */
+@media (max-width: 425px) {
+    .left h1 { font-size: 24px; }
+    .left h2, .left p, .left li { font-size: 14px; }
+    .nav-btn { font-size: 22px; padding: 6px; }
+}
+
+/* Mobile M - 375px */
+@media (max-width: 375px) {
+    .left h1 { font-size: 22px; }
+    .left h2, .left p, .left li { font-size: 13px; }
+    .nav-btn { font-size: 20px; padding: 5px; }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 320px) {
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+    .left, .right {
+        width: 100%;
+        height: auto;
+    }
+    .left {
+        padding: 20px 15px;
+    }
+    .left h1 { font-size: 18px; }
+    .left h2 { font-size: 16px; }
+    .left p, .left li { font-size: 14px; line-height: 1.4; }
+    .nav-btn { font-size: 16px; padding: 4px; }
+}
+
+
+</style>
+</head>
+<body>
+
+    <!-- Prev / Next Düymələri -->
+    <button class="nav-btn prev" onclick="location.href='LuminaraModel.html'">◀</button>
+    <button class="nav-btn next" onclick="location.href='ikincisehife.html'">▶</button>
+
+    <div class="wrapper">
+        <!-- SOL TƏRƏF – YAZI -->
+        <div class="left">
+            <h1>Luminara Moda – Məqsəd və Nə Üçündür</h1>
+            <p>
+                Bu mərhələ layihəmizin başlanğıcıdır. Biz açdığımız modelik kursla tələbələrə modellik əsaslarını öyrədirik. 
+                Burada düzgün duruş, səhnə davranışı və görünüşün idarə olunması kimi fundamental biliklər verilir. 
+                Məqsəd tələbələrin peşəkar başlanğıcını yaratmaq və onları gələcək mərhələlərə hazırlamaqdır.
+            </p>
+
+            <h2>Tələbə nailiyyəti:</h2>
+            <ul>
+                <li>Tələbə modellik əsaslarını öyrənir və düzgün başlanğıc formalaşdırır.</li>
+                <li>Duruş, gediş və səhnə mədəniyyətində bacarıq qazanır.</li>
+                <li>Praktik məşqlərlə özünəinamı və hazırlığını artırır.</li>
+                <li>Hər dərs onun peşəkar modelliyə addımını möhkəmləndirir.</li>
+            </ul>
+
+            <h2>Bizim nailiyyətimiz:</h2>
+            <ul>
+                <li>Kurs vasitəsilə tələbələr üçün sistemli və əlçatan mühit yaratdıq.</li>
+                <li>Tədrisi praktik, rahat və səmərəli qurduq.</li>
+                <li>Layihənin gələcək mərhələləri üçün möhkəm baza hazırladıq.</li>
+                <li>Bu mərhələ brendimizin əsasını və kursun vizual simvolunu göstərir.</li>
+            </ul>
+        </div>
+
+        <!-- SAĞ TƏRƏF – VİDEO -->
+        <div class="right">
+            <video autoplay muted loop>
+                <source src="Luminara_video/luminara_model.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+</body>
+</html>

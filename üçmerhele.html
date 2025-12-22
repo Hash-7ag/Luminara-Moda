@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINARA MODA</title>
+<style>
+
+/* Ümumi tənzimləmələr */
+body {
+    margin: 0;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Video fon */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Circle elementləri */
+.circle {
+    width: 21vw;
+    height: 21vw;
+    max-width: 310px;
+    max-height: 310px;
+    min-width: 240px;
+    min-height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transform: scale(0);
+    transition: transform 2.3s ease;
+}
+
+body.loaded .circle {
+    transform: scale(1);
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay mətn */
+.text {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: serif;
+    text-align: center;
+}
+
+/* Prev / Next düymələri */
+.nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.26);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.nav:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav.left {
+    left: 0;
+}
+
+.nav.right {
+    right: 0;
+}
+
+/* Media Queries */
+
+/* Laptop L - 1440px */
+@media (max-width: 1440px) {
+    .circle {
+        width: 20vw;
+        height: 20vw;
+    }
+    .text {
+        font-size: 36px;
+    }
+}
+
+/* Laptop - 1024px */
+@media (max-width: 1024px) {
+    .circle {
+        width: 25vw;
+        height: 25vw;
+    }
+    .text {
+        font-size: 32px;
+    }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    .circle {
+        width: 28vw;
+        height: 28vw;
+        min-width: 150px;
+        min-height: 150px;
+    }
+    .text {
+        font-size: 24px;
+    }
+}
+
+/* Mobile L - 425px */
+@media (max-width: 425px) {
+    .circle {
+        width: 35vw;
+        height: 35vw;
+        min-width: 120px;
+        min-height: 120px;
+    }
+    .text {
+        font-size: 20px;
+    }
+}
+
+/* Mobile M - 375px */
+@media (max-width: 375px) {
+    .circle {
+        width: 38vw;
+        height: 38vw;
+        min-width: 110px;
+        min-height: 110px;
+    }
+    .text {
+        font-size: 18px;
+    }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 320px) {
+    .circle {
+        width: 42vw;
+        height: 42vw;
+        min-width: 100px;
+        min-height: 100px;
+    }
+    .text {
+        font-size: 16px;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <!-- Video fon -->
+    <video autoplay muted loop id="bg-video">
+        <source src="Luminara_video/arxa_fon_yenilenmis.mp4" type="video/mp4">
+    </video>
+
+    <!-- Prev / Next düymələri -->
+    <button class="nav left" onclick="location.href='ikincisehife.html'">◀</button>
+    <button class="nav right" onclick="location.href='sondadanışılacaqlar.html'">▶</button>
+
+    <!-- Şəkillər üçün container -->
+    <main class="container">
+        <a h class="circle">
+            <img src="Luminara_img/əlaqələr2.jpg" alt="Əlaqələr">  
+            <div class="text">Əlaqələr</div>
+        </a>
+
+        <a  class="circle">
+            <img src="Luminara_img/gəlirlər.jpg" alt="Gəlirlər">
+            <div class="text">Gəlirlər</div>
+        </a>
+
+        <a  class="circle">
+            <img src="Luminara_img/ugurlar.jpg" alt="Uğurlar">
+            <div class="text">Uğurlar</div>
+        </a>
+
+       
+    </main>
+
+    <!-- Script: Circle animasiya -->
+    <script>
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINARA MODA</title>
+<style>
+
+   /* Ümumi tənzimləmələr */
+body {
+    margin: 0;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Video fon */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Circle elementləri */
+.circle {
+    width: 18vw;
+    height: 18vw;
+    max-width: 280px;
+    max-height: 280px;
+    min-width: 210px;
+    min-height: 210px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transform: scale(0);
+    transition: transform 2.3s ease;
+}
+
+body.loaded .circle {
+    transform: scale(1);
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay mətn */
+.text {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: serif;
+    text-align: center;
+}
+
+/* Prev / Next düymələri */
+.nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.26);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.nav:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav.left {
+    left: 0;
+}
+
+.nav.right {
+    right: 0;
+}
+
+/* Media Queries */
+
+/* Laptop L - 1440px */
+@media (max-width: 1440px) {
+    .circle {
+        max-width: 260px;
+        max-height: 260px;
+    }
+    .text {
+        font-size: 20px;
+    }
+    .nav {
+        font-size: 28px;
+        padding: 9px;
+    }
+}
+
+/* Laptop - 1024px */
+@media (max-width: 1024px) {
+    .circle {
+        max-width: 240px;
+        max-height: 240px;
+    }
+    .text {
+        font-size: 18px;
+    }
+    .nav {
+        font-size: 26px;
+        padding: 8px;
+    }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    .circle {
+        width: 28vw;
+        height: 28vw;
+        min-width: 150px;
+        min-height: 150px;
+    }
+    .text {
+        font-size: 16px;
+    }
+    .nav {
+        font-size: 24px;
+        padding: 7px;
+    }
+}
+
+/* Mobile L - 425px */
+@media (max-width: 425px) {
+    .circle {
+        width: 32vw;
+        height: 32vw;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .nav {
+        font-size: 22px;
+        padding: 6px;
+    }
+}
+
+/* Mobile M - 375px */
+@media (max-width: 375px) {
+    .circle {
+        width: 36vw;
+        height: 36vw;
+    }
+    .text {
+        font-size: 13px;
+    }
+    .nav {
+        font-size: 20px;
+        padding: 5px;
+    }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 320px) {
+    .circle {
+        width: 40vw;
+        height: 40vw;
+    }
+    .text {
+        font-size: 12px;
+    }
+    .nav {
+        font-size: 18px;
+        padding: 4px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+    <!-- Video fon -->
+    <video autoplay muted loop id="bg-video">
+        <source src="Luminara_video/arxa_fon_yenilenmis.mp4" type="video/mp4">
+    </video>
+
+    <!-- Prev / Next düymələri -->
+    <button class="nav left" onclick="location.href='başlıqdalogo.html'">◀</button>
+    <button class="nav right" onclick="location.href='üçmerhele.html'">▶</button>
+
+    <!-- Şəkillər üçün container -->
+    <main class="container">
+        <a href="LuminaraModel.html" class="circle">
+            <img src="Luminara_img/luminara_model.jpg" alt="Luminara Modellik Kursu">  
+            <div class="text">Luminara Modellik Kursu</div>
+        </a>
+
+        <a href="Modadizayn.html" class="circle">
+            <img src="Luminara_img/moda_dizayn.jpg" alt="Moda Dizayn">
+            <div class="text">Moda Dizayn</div>
+        </a>
+
+        <a href="Modelhazırlığı.html" class="circle">
+            <img src="Luminara_img/model_hazirligi.jpg" alt="Model Hazırlığı">
+            <div class="text">Model Hazırlığı</div>
+        </a>
+
+        <a href="PodyumNümayişi.html" class="circle">
+            <img src="Luminara_img/podyum_numayisi.jpg" alt="Podyum Nümayişi">
+            <div class="text">Podyum Nümayişi</div>
+        </a>
+
+        <a href="SosialMediaNümayişi.html" class="circle">
+            <img src="Luminara_img/sosial_media_numayisi.jpg" alt="Sosial Media Nümayişi">
+            <div class="text">Sosial Media Nümayişi</div>
+        </a>
+    </main>
+
+    <!-- Script: Circle animasiya -->
+    <script>
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+    </script>
+
+</body>
+</html>

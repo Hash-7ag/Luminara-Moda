@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINARA MODA</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .circle {
+            width: 30vw;
+            height: 30vw;
+            max-width: 700px;
+            max-height: 700px;
+            min-width: 300px;
+            min-height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.35s ease;
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: serif;
+        }
+
+        .nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.26);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .nav.left { left: 0; }
+        .nav.right { right: 0; }
+
+        .circle.big {
+            transform: scale(0);
+            transition: transform 1.5s ease;
+        }
+
+        body.loaded .circle.big {
+            transform: scale(1);
+        }
+
+        .circle.big:hover {
+            transform: scale(1.1);
+        }
+
+        /* Media Queries */
+        /* Laptop L - 1440px */
+        @media (max-width: 1440px) {
+            .circle {
+                max-width: 650px;
+                max-height: 650px;
+            }
+            .text {
+                font-size: 28px;
+            }
+            .nav {
+                font-size: 28px;
+                padding: 9px;
+            }
+        }
+
+        /* Laptop - 1024px */
+        @media (max-width: 1024px) {
+            .circle {
+                max-width: 550px;
+                max-height: 550px;
+            }
+            .text {
+                font-size: 26px;
+            }
+            .nav {
+                font-size: 26px;
+                padding: 8px;
+            }
+        }
+
+        /* Tablet - 768px */
+        @media (max-width: 768px) {
+            .circle {
+                width: 50vw;
+                height: 50vw;
+                min-width: 150px;
+                min-height: 150px;
+            }
+            .text {
+                font-size: 18px;
+            }
+            .nav {
+                font-size: 24px;
+                padding: 7px;
+            }
+        }
+
+        /* Mobile L - 425px */
+        @media (max-width: 425px) {
+            .circle {
+                width: 60vw;
+                height: 60vw;
+            }
+            .text {
+                font-size: 16px;
+            }
+            .nav {
+                font-size: 22px;
+                padding: 6px;
+            }
+        }
+
+        /* Mobile M - 375px */
+        @media (max-width: 375px) {
+            .circle {
+                width: 65vw;
+                height: 65vw;
+            }
+            .text {
+                font-size: 15px;
+            }
+            .nav {
+                font-size: 20px;
+                padding: 5px;
+            }
+        }
+
+        /* Mobile S - 320px */
+        @media (max-width: 320px) {
+            .circle {
+                width: 70vw;
+                height: 70vw;
+            }
+            .text {
+                font-size: 14px;
+            }
+            .nav {
+                font-size: 18px;
+                padding: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Prev / Next Düymələri -->
+    <button class="nav left" onclick="location.href='ikincisehife.html'">◀</button>
+    <button class="nav right" onclick="location.href='modelhazırlığı2.html'">▶</button>
+
+    <!-- Video fon -->
+    <video autoplay muted loop id="bg-video">
+        <source src="Luminara_video/arxa_fon_yenilenmis.mp4" type="video/mp4">
+    </video>
+
+    <!-- Şəkil -->
+    <div class="container">
+        <a class="circle big">
+            <img src="Luminara_img/model_hazirligi.jpg" alt="Model Hazırlığı">
+            <div class="text">Model Hazılığı</div>
+        </a>
+    </div>
+
+    <script>
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+    </script>
+
+</body>
+</html>

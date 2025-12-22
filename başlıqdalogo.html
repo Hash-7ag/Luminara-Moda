@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINARA MODA</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Video fon */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Image Box */
+        .image-box img {
+            width: 650px; /* Desktop üçün */
+            border-radius: 50%;
+            transform: scale(0);
+            animation: zoomIn 1.5s ease-out forwards;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Prev / Next düymələri */
+        .nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.26);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        .nav:hover {
+            background: rgba(0,0,0,0.5);
+        }
+
+        .nav.left {
+            left: 0;
+        }
+
+        .nav.right {
+            right: 0;
+        }
+
+        /* Media Queries */
+        /* Laptop L - 1440px */
+        @media (max-width: 1440px) {
+            .image-box img {
+                width: 600px;
+            }
+            .nav {
+                font-size: 28px;
+                padding: 9px;
+            }
+        }
+
+        /* Laptop - 1024px */
+        @media (max-width: 1024px) {
+            .image-box img {
+                width: 500px;
+            }
+            .nav {
+                font-size: 26px;
+                padding: 8px;
+            }
+        }
+
+        /* Tablet - 768px */
+        @media (max-width: 768px) {
+            .image-box img {
+                width: 350px;
+            }
+            .nav {
+                font-size: 24px;
+                padding: 7px;
+            }
+        }
+
+        /* Mobile L - 425px */
+        @media (max-width: 425px) {
+            .image-box img {
+                width: 250px;
+            }
+            .nav {
+                font-size: 22px;
+                padding: 6px;
+            }
+        }
+
+        /* Mobile M - 375px */
+        @media (max-width: 375px) {
+            .image-box img {
+                width: 220px;
+            }
+            .nav {
+                font-size: 20px;
+                padding: 5px;
+            }
+        }
+
+        /* Mobile S - 320px */
+        @media (max-width: 320px) {
+            .image-box img {
+                width: 180px;
+            }
+            .nav {
+                font-size: 18px;
+                padding: 4px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Prev / Next düymələri -->
+    <button class="nav left" onclick="location.href='index.html'">◀</button>
+    <button class="nav right" onclick="location.href='ikincisehife.html'">▶</button>
+
+    <!-- Video fon -->
+    <video autoplay muted loop id="bg-video">
+        <source src="Luminara_video/arxa_fon_yenilenmis.mp4" type="video/mp4">
+    </video>
+
+    <!-- Animasiya şəkil -->
+    <div class="image-box">
+        <img src="Luminara_img/luminara_model_logo.jpg" alt="Luminara Model">
+    </div>
+
+</body>
+</html>
